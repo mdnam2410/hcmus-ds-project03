@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 streamlit = "*"
+numpy = "*"
+vncorenlp = "*"
+pandas = "*"
+sklearn = "*"
 
 [dev-packages]
 
