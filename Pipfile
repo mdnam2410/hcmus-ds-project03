@@ -7,8 +7,9 @@ name = "pypi"
 streamlit = "*"
 numpy = "*"
 vncorenlp = "*"
+joblib = "*"
+scikit-learn = "==1.0.1"
 pandas = "*"
-sklearn = "*"
 
 [dev-packages]
 
