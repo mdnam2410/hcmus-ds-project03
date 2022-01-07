@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
 from vncorenlp import VnCoreNLP
 import joblib
 import re
@@ -86,6 +87,14 @@ def predict(news, model):
     return f"Result: {'This is a fake news' if m(news)[0] == 1 else 'This is a fact news' }"
 
 st.title('Fake news detector')
+st.header('Authors')
+st.table(pd.DataFrame(
+    data={
+        'ID': ['19120080', '19120298', '19120460'],
+        'Name': ['Lê Đức Huy', 'Mai Duy Nam', 'Nguyễn Hữu Bình']
+    },
+))
+st.header('Models')
 st.selectbox('Choose model', ('Naive Bayes', 'Logistic Regression', 'SVM'), key='selectbox_model')
 st.text_input('Enter news to validate', key='textinput_news')
 if st.button('Predict', key='button_predict',):
