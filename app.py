@@ -33,8 +33,7 @@ def tokenizer(in_string):
 
 trained_bayes = joblib.load("./TF-IDF_NaiveBayes.pkl")
 def naive_bayes(news):
-    # because this model return 0 for fake news and 1 for vice versa
-    return 1 - trained_bayes.predict([news])
+    return trained_bayes.predict([news])
 
 
 # ---- Logistic regression model ----
